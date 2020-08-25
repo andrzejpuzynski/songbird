@@ -1,0 +1,45 @@
+@import "./colours.css";
+
+*,
+:after,
+:before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--colour-background);
+  display: grid;
+  justify-items: center;
+  align-items: start;
+}
+
+.container {
+  padding: 0 15px;
+}
+
+@media screen and (min-width: 576) and (orientation: portrait) {
+  .container {
+    max-width: 540px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
