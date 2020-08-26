@@ -1,4 +1,9 @@
 :root {
     --colour-background: #222;
     --colour-red: red;
+    --colour-white: #fff;
+    --colour-bird: rgb(0, 124,93);
+    --colour-header-part: #008966;
+    --colour-active-part: #00bc8c;
+
 }

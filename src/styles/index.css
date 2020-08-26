@@ -1,4 +1,5 @@
 @import "./colours.css";
+@import "./fonts.css";
 
 *,
 :after,
@@ -21,7 +22,7 @@ body {
   padding: 0 15px;
 }
 
-@media screen and (min-width: 576) and (orientation: portrait) {
+@media screen and (min-width: 576px) and (orientation: portrait) {
   .container {
     max-width: 540px;
   }
