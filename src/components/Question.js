@@ -6,7 +6,12 @@ import birdsData from '../data/birds';
 const Question = (props) => {
     return (
         <section className="main-question-container">
-            <img className="main-question-birdimage" src={unknownBird} />
+            <img
+                className="main-question-birdimage"
+                src={props.theAnswerIsfound
+                        ? birdsData[props.part][props.randomAnswerId]['image']
+                        : unknownBird}
+            />
             <div className="main-question-birddetails">
                 <h2 className="main-question-birdname">
                     {props.theAnswerIsfound ?

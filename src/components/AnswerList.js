@@ -9,6 +9,7 @@ const AnswerList = (props) => {
                     <li
                         key={idx}
                         id={idx}
+                        className={props.id == idx ? `current` : ``}
                         onClick={(event) => props.onItemSelected(event)}
                     >
                         <span

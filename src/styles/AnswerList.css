@@ -20,6 +20,10 @@
   border: 1px solid var(--colour-border-grey);
 }
 
+.current {
+  background-color:var(--colour-activeitemlist);
+}
+
 .main-answerlist-container li:nth-child(1) {
   border-top-left-radius: 6px;
   border-top-right-radius: 6px;

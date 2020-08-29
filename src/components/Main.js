@@ -2,6 +2,7 @@ import React from 'react';
 import '../styles/Main.css';
 import Question from './Question';
 import Answer from './Answer';
+import NextLevel from './NextLevel';
 
 const Main = (props) => {
     return (
@@ -10,10 +11,15 @@ const Main = (props) => {
                 part={props.part}
                 randomAnswerId={props.randomAnswerId}
                 theAnswerIsfound={props.theAnswerIsfound}
-            />
+                />
             <Answer 
+                id={props.id}
                 part={props.part}
                 onItemSelected={props.onItemSelected}
+                />
+            <NextLevel
+                theAnswerIsfound={props.theAnswerIsfound}
+                goToTheNextPage={props.goToTheNextPage}
             />
         </main>
     )

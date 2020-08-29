@@ -6,7 +6,8 @@ import AnswerInfo from './AnswerInfo';
 const Answer = (props) => {
     return (
         <section className="main-answer-container">
-            <AnswerList 
+            <AnswerList
+                id={props.id}
                 part={props.part}
                 onItemSelected={props.onItemSelected}
             />
