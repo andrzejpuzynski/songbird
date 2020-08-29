@@ -5,5 +5,7 @@
     --colour-bird: rgb(0, 124,93);
     --colour-header-part: #008966;
     --colour-active-part: #00bc8c;
+    --colour-border-grey: rgb(86, 86, 86);
 
+    --box-background: #303030;
 }

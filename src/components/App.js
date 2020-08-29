@@ -1,6 +1,7 @@
 import React from 'react';
 import '../styles/App.css';
 import Header from './Header';
+import Main from './Main';
 
 class App extends React.Component {
   constructor() {
@@ -24,6 +25,7 @@ class App extends React.Component {
           score={this.state.score}
           parts={this.state.parts}
           part={this.state.part} />
+        <Main />
       </ React.Fragment>
     );
   }
