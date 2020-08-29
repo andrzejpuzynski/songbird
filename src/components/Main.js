@@ -3,11 +3,18 @@ import '../styles/Main.css';
 import Question from './Question';
 import Answer from './Answer';
 
-const Main = () => {
+const Main = (props) => {
     return (
         <main className="main-container">
-            <Question />
-            <Answer />
+            <Question 
+                part={props.part}
+                randomAnswerId={props.randomAnswerId}
+                theAnswerIsfound={props.theAnswerIsfound}
+            />
+            <Answer 
+                part={props.part}
+                onItemSelected={props.onItemSelected}
+            />
         </main>
     )
 }
