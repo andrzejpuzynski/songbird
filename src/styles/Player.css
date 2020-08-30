@@ -1,3 +1,12 @@
 .player-container {
     max-width: 150px;
 }
+
+.playback-button {
+    padding: 10px;
+    padding-top: 11px;
+    width: 40px;
+    height: 40px;
+    border: 2px solid var(--colour-active-part);
+    border-radius: 50%;
+}
