@@ -3,6 +3,8 @@ import '../styles/App.css';
 import Header from './Header';
 import Main from './Main';
 import GameOver from './GameOver';
+import winSound from '../assets/win.mp3';
+import errorSound from '../assets/error.mp3';
 
 class App extends React.Component {
   constructor() {
@@ -28,6 +30,7 @@ class App extends React.Component {
     this.goToTheNextPage = this.goToTheNextPage.bind(this);
     this.resetListStyles = this.resetListStyles.bind(this);
     this.playAgain = this.playAgain.bind(this);
+    this.soundFx = this.soundFx.bind(this);
   }
 
   componentDidMount() {
@@ -60,9 +63,16 @@ class App extends React.Component {
           theAnswerIsfound: true,
           score: this.state.score + 5 - this.state.countSelectedItems,
         })
+        this.soundFx(true)
       } else {
         answerIndicator.classList.add("error");
+        this.soundFx(false)
       }
+    }
+    if (wasSelected || !theCorrectAnswerIsfound) {
+      this.setState({
+        id: answerID,
+      })
     }
     if (wasSelected || theCorrectAnswerIsfound) {
       this.setState({
@@ -103,6 +113,18 @@ class App extends React.Component {
     });
   }
 
+  soundFx(correct) {
+    const winSound = document.getElementById("winSound");
+    const errorSound = document.getElementById("errorSound");
+    if (correct) {
+      winSound.currentTime = 0;
+      winSound.play();
+    } else {
+      errorSound.currentTime = 0;
+      errorSound.play();
+    }
+  }
+
   render() {
     if (this.state.quizIsEnd) {
       return (
@@ -132,6 +154,8 @@ class App extends React.Component {
             theAnswerIsfound={this.state.theAnswerIsfound}
             goToTheNextPage={this.goToTheNextPage}
           />
+          <audio src={winSound} id="winSound"></audio>
+          <audio src={errorSound} id="errorSound"></audio>
         </ React.Fragment>
       );
     }
