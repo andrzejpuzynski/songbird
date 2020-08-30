@@ -2,8 +2,8 @@
   display: flex;
   flex-wrap: nowrap;
   flex-direction: column;
-  flex: 0 1 100%;
-  min-height: 620px;
+  flex: 0 2 100%;
+  min-height: 640px;
   margin-bottom: 25px;
   border-radius: 4px;
 }

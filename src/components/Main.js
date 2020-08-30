@@ -15,6 +15,7 @@ const Main = (props) => {
             <Answer 
                 id={props.id}
                 part={props.part}
+                isListSelected={props.isListSelected}
                 onItemSelected={props.onItemSelected}
                 />
             <NextLevel

@@ -2,6 +2,7 @@ import React from 'react';
 import '../styles/Question.css';
 import unknownBird from '../assets/bird.jpg';
 import birdsData from '../data/birds';
+import Player from './Player';
 
 const Question = (props) => {
     return (
@@ -18,7 +19,9 @@ const Question = (props) => {
                     `${birdsData[props.part][props.randomAnswerId]['name']}`
                     : `******`} 
                 </h2>
-                <div className="main-question-birdplayer"></div>
+                <div className="main-question-birdplayer">
+                    <Player source={birdsData[props.part][props.randomAnswerId]['audio']} />
+                </div>
             </div>
         </section>
     )

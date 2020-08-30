@@ -1,13 +1,143 @@
 .main-answerinfo-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    flex: 1 1 100%;
-    height: 100%;
-    padding: 0;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: flex-start;
+  flex: 1 1 100%;
+  min-height: 300px;
+  padding: 16px;
+  margin-top: 40px;
+  margin-left: 0;
+  color: var(--colour-white);
+  border-radius: 6px;
+  border: 1px solid var(--colour-border-grey);
+  background-color: var(--box-background);
+}
+
+@media screen and (min-width: 768px) {
+  .main-answerinfo-container {
+    min-height: 300px;
     margin-left: 30px;
-    color: var(--colour-white);
-    border-radius: 6px;
-    border: 1px solid var(--colour-border-grey);
-    background-color: var(--box-background);
+    margin-top: 0;
   }
+}
+
+@media screen and (min-width: 576px) {
+  .main-answerinfo-container {
+    flex-direction: row;
+  }
+}
+
+.main-answerinfo-container p {
+  line-height: 20px;
+  flex: 0 1 100%;
+}
+
+.main-answerinfo-birdimage {
+  width: 200px;
+  height: 155px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 25px;
+  align-self: center;
+}
+
+.main-answerinfo-birddetails {
+  flex: 1 1 160px;
+  height: 100%;
+  margin-left: 0;
+  padding: 4px;
+  padding-left: 0;
+  height: 155px;
+}
+
+@media screen and (min-width: 576px) {
+  .main-answerinfo-birddetails {
+    margin-left: 40px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .main-answerinfo-birddetails {
+    margin-left: 0;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .main-answerinfo-birddetails {
+    margin-left: 40px;
+  }
+}
+
+
+.main-answerinfo-birdname {
+  position: relative;
+  width: 100%;
+  height: 34px;
+  margin-bottom: 8px;
+  font-family: "Lato";
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 26px;
+  text-align: center;
+  color: var(--colour-white);
+}
+
+@media screen and (min-width: 576px) {
+  .main-answerinfo-birdname {
+      text-align: left;
+  }
+}
+
+.main-answerinfo-birdname:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -6px;
+  height: 30px;
+  border-bottom: 1px solid var(--colour-border-grey);
+}
+
+.main-answerinfo-birdnamelat {
+  position: relative;
+  width: 100%;
+  height: 28px;
+  margin-top: 12px;
+  margin-bottom: 8px;
+  font-family: "Lato";
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 26px;
+  text-align: center;
+  color: var(--colour-white);
+}
+
+@media screen and (min-width: 576px) and (orientation: portrait) {
+  .main-answerinfo-birdnamelat {
+      text-align: left;
+  }
+}
+
+.main-answerinfo-birdnamelat:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0px;
+  height: 30px;
+  border-bottom: 1px solid var(--colour-border-grey);
+}
+
+.main-answerinfo-description {
+  position: relative;
+  width: 100%;
+  margin-top: 2px;
+  margin-bottom: 8px;
+  font-family: "Lato";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  color: var(--colour-white);
+}

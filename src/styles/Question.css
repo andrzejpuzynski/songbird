@@ -1,6 +1,5 @@
 .main-question-container {
   display: flex;
-  flex-wrap: nowrap;
   flex-direction: column;
   flex: 0 1 100%;
   height: 345px;
@@ -10,7 +9,7 @@
   background-color: var(--box-background);
 }
 
-@media screen and (min-width: 576px) and (orientation: portrait) {
+@media screen and (min-width: 576px) {
   .main-question-container {
     flex-direction: row;
     height: 187px;
@@ -21,24 +20,26 @@
   align-self: center;
   width: 200px;
   height: 155px;
+  object-fit: cover;
   border-radius: 10px;
   margin-bottom: 25px;
 }
 
-@media screen and (min-width: 576px) and (orientation: portrait) {
-    .main-question-birdimage {
+@media screen and (min-width: 576px) {
+  .main-question-birdimage {
+      align-self: flex-start;
       margin-bottom: 0;
     }   
 }
 
 .main-question-birddetails {
-  flex: 2 1 100%;
+  flex: 1 1 100%;
   height: 100%;
   margin-left: 0;
   padding: 4px;
 }
 
-@media screen and (min-width: 576px) and (orientation: portrait) {
+@media screen and (min-width: 576px) {
   .main-question-birddetails {
     margin-left: 40px;
   }
@@ -57,7 +58,7 @@
     color: var(--colour-white);
 }
 
-@media screen and (min-width: 576px) and (orientation: portrait) {
+@media screen and (min-width: 576px) {
     .main-question-birdname {
         text-align: left;
     }
@@ -74,6 +75,9 @@
 }
 
 .main-question-birdplayer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   height: 100px;
 }

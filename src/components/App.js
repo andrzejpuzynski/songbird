@@ -150,6 +150,7 @@ class App extends React.Component {
             id={this.state.id}
             part={this.state.part}
             randomAnswerId={this.state.randomAnswerId}
+            isListSelected={this.state.isListSelected}
             onItemSelected={this.onItemSelected}
             theAnswerIsfound={this.state.theAnswerIsfound}
             goToTheNextPage={this.goToTheNextPage}

@@ -10,8 +10,11 @@ const Answer = (props) => {
                 id={props.id}
                 part={props.part}
                 onItemSelected={props.onItemSelected}
-            />
+                />
             <AnswerInfo
+                id={props.id}
+                part={props.part}
+                isListSelected={props.isListSelected}
             />
         </section>
     )
